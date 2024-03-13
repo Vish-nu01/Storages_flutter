@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'home.dart';
@@ -59,7 +60,8 @@ class _LoginSharedState extends State<LoginShared> {
                     if (username!.isEmpty || !username.contains("@")) {
                       return "Invalid or Empty UserName!!!";
                     } else {
-                      return null;
+                      FirebaseAuth auth=FirebaseAuth.instance;
+                      auth.createUserWithEmailAndPassword(email: uname_controller.toString(), password: pass_controller.toString());
                     }
                   },
                   controller: uname_controller,

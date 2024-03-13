@@ -47,8 +47,6 @@ dependencies:
   image_picker:              # fetch image from cam or gallery
   path:                      # fetch the system path of that particular images
   permission_handler:
-  flutter_local_notifications:
-  geolocator:
   get: ^4.6.6
   rename_app:
 
