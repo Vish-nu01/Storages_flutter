@@ -7,7 +7,7 @@ void main() {
   runApp(MaterialApp(
     home: MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (context) => Count_provider()),
+        ChangeNotifierProvider(create: (context) => Counter_Providerr()),
         ChangeNotifierProvider(create: (context) => Auth_Provider()),
       ],
       child: Multi_Providerr(),
@@ -29,12 +29,12 @@ class Multi_Providerr extends StatelessWidget {
             ),
             ElevatedButton(
                 onPressed: () {
-                  Provider.of<Count_provider>(context, listen: false)
+                  Provider.of<Counter_Providerr>(context, listen: false)
                       .increment();
                 },
                 child: const Text("Increment Counter")),
             Text(
-              "Count value :${Provider.of<Count_provider>(context).count}",
+              "Count value :${Provider.of<Counter_Providerr>(context).count}",
               style: const TextStyle(fontSize: 20),
             ),
             const SizedBox(

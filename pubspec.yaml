@@ -49,6 +49,7 @@ dependencies:
   permission_handler:
   get: ^4.6.6
   rename_app:
+  geolocator:
 
 
   #api using dio

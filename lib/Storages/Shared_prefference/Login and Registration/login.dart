@@ -1,8 +1,7 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:storages_flutter/Storages/Shared_prefference/Login%20and%20Registration/registration.dart';
 import 'home.dart';
-import 'package:storages_flutter/Storages/Shared_prefference/registration.dart';
 
 
 void main() {
@@ -60,8 +59,7 @@ class _LoginSharedState extends State<LoginShared> {
                     if (username!.isEmpty || !username.contains("@")) {
                       return "Invalid or Empty UserName!!!";
                     } else {
-                      FirebaseAuth auth=FirebaseAuth.instance;
-                      auth.createUserWithEmailAndPassword(email: uname_controller.toString(), password: pass_controller.toString());
+                      return null;
                     }
                   },
                   controller: uname_controller,
